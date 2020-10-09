@@ -92,6 +92,7 @@ class GUI extends React.Component {
     }
 }
 
+// 定义 props 的类型
 GUI.propTypes = {
     assetHost: PropTypes.string,
     children: PropTypes.node,
@@ -115,6 +116,7 @@ GUI.propTypes = {
     vm: PropTypes.instanceOf(VM).isRequired
 };
 
+// 默认props
 GUI.defaultProps = {
     isScratchDesktop: false,
     onStorageInit: storageInstance => storageInstance.addOfficialScratchWebStores(),
@@ -123,6 +125,8 @@ GUI.defaultProps = {
     onVmInit: (/* vm */) => {}
 };
 
+
+// 将 state 映射到 props
 const mapStateToProps = state => {
     const loadingState = state.scratchGui.projectState.loadingState;
     return {
@@ -153,6 +157,7 @@ const mapStateToProps = state => {
     };
 };
 
+// 将 state 映射到 dispatch
 const mapDispatchToProps = dispatch => ({
     onExtensionButtonClick: () => dispatch(openExtensionLibrary()),
     onActivateTab: tab => dispatch(activateTab(tab)),
