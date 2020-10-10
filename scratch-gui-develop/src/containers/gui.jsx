@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {compose} from 'redux';
-import {connect} from 'react-redux';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
 import ReactModal from 'react-modal';
 import VM from 'scratch-vm';
 import {injectIntl, intlShape} from 'react-intl';
@@ -157,7 +157,7 @@ const mapStateToProps = state => {
     };
 };
 
-// 将 state 映射到 dispatch
+// 将 state 映射到 dispatch // 最终 dispatch 的是一个 Action
 const mapDispatchToProps = dispatch => ({
     onExtensionButtonClick: () => dispatch(openExtensionLibrary()),
     onActivateTab: tab => dispatch(activateTab(tab)),
